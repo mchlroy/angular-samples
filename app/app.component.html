@@ -1,0 +1,39 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    {{message}}
+  </h1>
+  <div style="display: inline-block; vertical-align: top; margin: 10px;">
+    <app-testbinding></app-testbinding>
+  </div>
+  <div style="display: inline-block; vertical-align: top; margin: 10px;">
+    <app-testevents></app-testevents>
+  </div>
+  <div style="display: inline-block; vertical-align: top; margin: 10px;">
+    <app-testtwowaybinding></app-testtwowaybinding>
+  </div>
+  <div style="display: inline-block; vertical-align: top; margin: 10px;">
+    <app-teststructuraldirectives></app-teststructuraldirectives>
+  </div>
+  <div style="display: inline-block; vertical-align: top; margin: 10px;">
+    <app-testcomponentinteraction [parentData]="name" (childEvent)="message=$event"></app-testcomponentinteraction>
+  </div>
+  <div style="display: inline-block; vertical-align: top; margin: 10px;">
+    <app-testpipes></app-testpipes>
+  </div>
+  <div style="display: inline-block; vertical-align: top; margin: 10px;">
+    <app-testdepedencyinjection></app-testdepedencyinjection>
+  </div>
+  <div style="display: inline-block; vertical-align: top; margin: 10px;">
+    <app-testdepedencyinjectiondetails></app-testdepedencyinjectiondetails>
+  </div>
+</div>
+<h1>Routing And Navgiation Router outlet</h1>
+<nav>
+  <!-- <a [routerLink]="[ '/departments' ]">Departments</a> -->
+  <a routerLink="departments" routerLinkActive="active">Departments</a>
+  <a routerLink="employees" routerLinkActive="active">Employees</a>
+</nav>
+<router-outlet></router-outlet>
+<!-- Routed Views go here-->
+
